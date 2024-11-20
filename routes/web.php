@@ -14,13 +14,14 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
 
-use App\Http\Controllers\Admin\CafeController;
-Route::controller(CafeController::class)->prefix('admin')->group(function() {
-    Route::get('cafe/create', 'add');
-    Route::get('cafe/edit', 'edit');
+use App\Http\Controllers\Admin\PuddingController;
+Route::controller(PuddingController::class)->prefix('admin')->name('admin.')->middleware('auth')->group(function() {
+    Route::get('pudding/create', 'add')->name('pudding.add');
+    Route::post('pudding/create', 'create')->name('pudding.create');
+    //Route::get('pudding/edit', 'edit');
 });
 Auth::routes();
 
