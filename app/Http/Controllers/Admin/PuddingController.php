@@ -20,15 +20,15 @@ class PuddingController extends Controller
          // Validationを行う
          $this->validate($request, Pudding::$rules);
 
-         $news = new Pudding;
+         $pudding = new Pudding;
          $form = $request->all();
  
-         // フォームから画像が送信されてきたら、保存して、$news->image_path に画像のパスを保存する
+         // フォームから画像が送信されてきたら、保存して、$pudding->image_path に画像のパスを保存する
          if (isset($form['image'])) {
              $path = $request->file('image')->store('public/image');
-             $news->image_path = basename($path);
+             $pudding->image_path = basename($path);
          } else {
-             $news->image_path = null;
+             $pudding->image_path = null;
          }
  
          // フォームから送信されてきた_tokenを削除する
@@ -37,10 +37,10 @@ class PuddingController extends Controller
          unset($form['image']);
  
          // データベースに保存する
-         $news->fill($form);
-         $news->save();
+         $pudding->fill($form);
+         $pudding->save();
          // 追記ここまで
-         // admin/news/createにリダイレクトする  
+         // admin/pudding/createにリダイレクトする  
         return redirect('admin/pudding/create');
     }
 
