@@ -19,4 +19,10 @@ class Pudding extends Model
         'reservations_allowed'=> 'required',
         'shop_address'=> 'required',
     );
+
+     // Pudding Modelに関連付けを行う
+     public function histories()
+     {
+         return $this->hasMany('App\Models\History');
+     }
 }

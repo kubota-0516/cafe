@@ -51,9 +51,9 @@
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label class="col-md-2" for="image_path">お店の住所</label>
+                        <label class="col-md-2" for="shop_address">お店の住所</label>
                         <div class="col-md-10">
-                            <textarea class="form-control" name="image_path" rows="1">{{ $pudding_form->image_path }}</textarea>
+                            <textarea class="form-control" name="shop_address" rows="1">{{ $pudding_form->shop_address }}</textarea>
                         </div>
                     </div>
                 
@@ -79,6 +79,18 @@
                         </div>
                     </div>
                 </form>
+                <div class="row mt-5">
+                    <div class="col-md-4 mx-auto">
+                        <h2>編集履歴</h2>
+                        <ul class="list-group">
+                            @if ($pudding_form->histories != null)
+                                @foreach ($pudding_form->histories as $history)
+                                    <li class="list-group-item">{{ $history->edited_at }}</li>
+                                @endforeach
+                            @endif
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

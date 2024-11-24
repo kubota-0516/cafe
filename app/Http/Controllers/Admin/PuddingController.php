@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\History;
+use Carbon\Carbon;
 
 use App\Models\Pudding;
 
@@ -41,7 +43,7 @@ class PuddingController extends Controller
          $pudding->save();
          // 追記ここまで
          // admin/pudding/createにリダイレクトする  
-        return redirect('admin/pudding/create');
+        return redirect('admin/pudding/index');
     }
 
     public function index(Request $request)
@@ -82,17 +84,20 @@ class PuddingController extends Controller
             $path = $request->file('image')->store('public/image');
             $pudding_form['image_path'] = basename($path);
         } else {
-            $pudding_form['image_path'] = $news->image_path;
+            $pudding_form['image_path'] = $pudding->image_path;
         }
         
         unset($pudding_form['image']);
         unset($pudding_form['remove']);
         unset($pudding_form['_token']);
         
-
-
         // 該当するデータを上書きして保存する
         $pudding->fill($pudding_form)->save();
+
+        $history = new History();
+        $history->pudding_id = $pudding->id;
+        $history->edited_at = Carbon::now();
+        $history->save();
 
         return redirect('admin/pudding');
     }

@@ -21,7 +21,7 @@ use App\Http\Controllers\Admin\PuddingController;
 Route::controller(PuddingController::class)->prefix('admin')->name('admin.')->middleware('auth')->group(function() {
     Route::get('pudding/create', 'add')->name('pudding.add');
     Route::post('pudding/create', 'create')->name('pudding.create');
-    Route::get('pudding/index', 'index')->name('pudding.index');
+    Route::get('pudding', 'index')->name('pudding.index'); //getの後indexとは書かないのが普通
     Route::post('pudding/edit', 'update')->name('pudding.update');
     Route::get('pudding/edit', 'edit')->name('pudding.edit');
     Route::get('pudding/delete', 'delete')->name('pudding.delete');
