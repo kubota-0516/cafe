@@ -23,37 +23,37 @@
                     <div class="form-group row">
                         <label class="col-md-2" for="shop_introduction">お店の紹介文</label>
                         <div class="col-md-10">
-                            <textarea class="form-control" name="shop_introduction" rows="20">{{ $pudding_form->shop_introduction }}</textarea>
+                            <textarea class="form-control" name="shop_introduction" rows="5">{{ $pudding_form->shop_introduction }}</textarea>
                         </div>
                     </div>
                     <div class="form-group row">
                         <label class="col-md-2" for="officialsite">お店のURL</label>
                         <div class="col-md-10">
-                            <textarea class="form-control" name="officialsite" rows="20">{{ $pudding_form->officialsite }}</textarea>
+                            <textarea class="form-control" name="officialsite" rows="1">{{ $pudding_form->officialsite }}</textarea>
                         </div>
                     </div>
                     <div class="form-group row">
                         <label class="col-md-2" for="googlemaplink">Googlemapのリンク</label>
                         <div class="col-md-10">
-                            <textarea class="form-control" name="googlemaplink" rows="20">{{ $pudding_form->googlemaplink }}</textarea>
+                            <textarea class="form-control" name="googlemaplink" rows="1">{{ $pudding_form->googlemaplink }}</textarea>
                         </div>
                     </div>
                     <div class="form-group row">
                         <label class="col-md-2" for="pets_allowed">ペット同伴の可否</label>
                         <div class="col-md-10">
-                            <textarea class="form-control" name="pets_allowed" rows="20">{{ $pudding_form->pets_allowed }}</textarea>
+                            <textarea class="form-control" name="pets_allowed" rows="1">{{ $pudding_form->pets_allowed }}</textarea>
                         </div>
                     </div>
                     <div class="form-group row">
                         <label class="col-md-2" for="reservations_allowed">予約の可否</label>
                         <div class="col-md-10">
-                            <textarea class="form-control" name="reservations_allowed" rows="20">{{ $pudding_form->reservations_allowed }}</textarea>
+                            <textarea class="form-control" name="reservations_allowed" rows="1">{{ $pudding_form->reservations_allowed }}</textarea>
                         </div>
                     </div>
                     <div class="form-group row">
                         <label class="col-md-2" for="image_path">お店の住所</label>
                         <div class="col-md-10">
-                            <textarea class="form-control" name="image_path" rows="20">{{ $pudding_form->image_path }}</textarea>
+                            <textarea class="form-control" name="image_path" rows="1">{{ $pudding_form->image_path }}</textarea>
                         </div>
                     </div>
                 

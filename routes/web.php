@@ -24,6 +24,7 @@ Route::controller(PuddingController::class)->prefix('admin')->name('admin.')->mi
     Route::get('pudding/index', 'index')->name('pudding.index');
     Route::post('pudding/edit', 'update')->name('pudding.update');
     Route::get('pudding/edit', 'edit')->name('pudding.edit');
+    Route::get('pudding/delete', 'delete')->name('pudding.delete');
 });
 Auth::routes();
 
