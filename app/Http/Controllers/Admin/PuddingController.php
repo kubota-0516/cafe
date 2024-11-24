@@ -44,13 +44,67 @@ class PuddingController extends Controller
         return redirect('admin/pudding/create');
     }
 
-    public function edit()
+    public function index(Request $request)
     {
-        return view('admin.pudding.edit');
+        $cond_title = $request->cond_title;
+        if ($cond_title != null) {
+            // 検索されたら検索結果を取得する
+            $posts = Pudding::where('shop_name', $cond_title)->get(); //titleをshop_nameに変更した
+        } else {
+            // それ以外はすべての店名を取得する
+            $posts = Pudding::all();
+        }
+        return view('admin.pudding.index', ['posts' => $posts, 'cond_title' => $cond_title]);
     }
 
-    public function update()
+    public function edit(Request $request)
     {
-        return redirect('admin.pudding.edit');
+        // Pudding Modelからデータを取得する
+        $pudding = Pudding::find($request->id);
+        if (empty($pudding)) {
+            abort(404);
+        }
+        return view('admin.pudding.edit', ['pudding_form' => $pudding]);
+    }
+
+    public function update(Request $request)
+    {
+        // Validationをかける
+        $this->validate($request, Pudding::$rules);
+        // Puddig Modelからデータを取得する
+        $pudding = Pudding::find($request->id);
+        // 送信されてきたフォームデータを格納する
+        $pudding_form = $request->all();
+
+        if ($request->remove == 'true') {
+            $pudding_form['image_path'] = null;
+        } elseif ($request->file('image')) {
+            $path = $request->file('image')->store('public/image');
+            $pudding_form['image_path'] = basename($path);
+        } else {
+            $pudding_form['image_path'] = $news->image_path;
+        }
+        
+        unset($pudding_form['image']);
+        unset($pudding_form['remove']);
+        unset($pudding_form['_token']);
+        
+
+
+        // 該当するデータを上書きして保存する
+        $pudding->fill($pudding_form)->save();
+
+        return redirect('admin/pudding');
+    }
+
+    public function delete(Request $request)
+    {
+        // 該当するpudding Modelを取得
+        $pudding = Pudding::find($request->id);
+
+        // 削除する
+        $pudding->delete();
+
+        return redirect('admin/pudding/');
     }
 }

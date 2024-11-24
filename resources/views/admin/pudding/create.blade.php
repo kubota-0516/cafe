@@ -23,43 +23,43 @@
                     <div class="form-group row">
                         <label class="col-md-2">店名</label>
                         <div class="col-md-10">
-                            <input type="text" class="form-control" name="title" value="{{ old('title') }}">
+                            <input type="text" class="form-control" name="title" value="{{ old('shop_name') }}">
                         </div>
                     </div>
                     <div class="form-group row">
                         <label class="col-md-2">お店の紹介文</label>
                         <div class="col-md-10">
-                            <textarea class="form-control" name="body" rows="5">{{ old('body') }}</textarea>
+                            <textarea class="form-control" name="body" rows="5">{{ old('shop_introduction') }}</textarea>
                         </div>
                     </div>
                     <div class="form-group row">
                         <label class="col-md-2">お店のURL</label>
                         <div class="col-md-10">
-                            <textarea class="form-control" name="body" rows="1">{{ old('body') }}</textarea>
+                            <textarea class="form-control" name="body" rows="1">{{ old('officialsite') }}</textarea>
                         </div>
                     </div>
                     <div class="form-group row">
                         <label class="col-md-2">Googlemapのリンク</label>
                         <div class="col-md-10">
-                            <textarea class="form-control" name="body" rows="1">{{ old('body') }}</textarea>
+                            <textarea class="form-control" name="body" rows="1">{{ old('googlemaplink') }}</textarea>
                         </div>
                     </div>
                     <div class="form-group row">
                         <label class="col-md-2">ペット同伴の可否</label>
                         <div class="col-md-10">
-                            <textarea class="form-control" name="body" rows="1">{{ old('body') }}</textarea>
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label class="col-md-2">住所</label>
-                        <div class="col-md-10">
-                            <textarea class="form-control" name="body" rows="1">{{ old('body') }}</textarea>
+                            <textarea class="form-control" name="body" rows="1">{{ old('pets_allowed') }}</textarea>
                         </div>
                     </div>
                     <div class="form-group row">
                         <label class="col-md-2">予約の可否</label>
                         <div class="col-md-10">
-                            <textarea class="form-control" name="body" rows="1">{{ old('body') }}</textarea>
+                            <textarea class="form-control" name="body" rows="1">{{ old('reservations_allowed') }}</textarea>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-md-2">住所</label>
+                        <div class="col-md-10">
+                            <textarea class="form-control" name="body" rows="1">{{ old('shop_address') }}</textarea>
                         </div>
                     </div>
 

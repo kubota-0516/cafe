@@ -11,7 +11,12 @@ class Pudding extends Model
     protected $guarded = array('id');
 
     public static $rules = array(
-        'title' => 'required',
-        'body' => 'required',
+        'shop_name' => 'required',
+        'shop_introduction' => 'required',
+        'officialsite'=> 'required',
+        'googlemaplink'=> 'required',
+        'pets_allowed'=> 'required',
+        'reservations_allowed'=> 'required',
+        'shop_address'=> 'required',
     );
 }
