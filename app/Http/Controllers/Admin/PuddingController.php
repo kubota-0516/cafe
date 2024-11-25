@@ -43,20 +43,31 @@ class PuddingController extends Controller
          $pudding->save();
          // 追記ここまで
          // admin/pudding/createにリダイレクトする  
-        return redirect('admin/pudding/index');
+        return redirect('admin/pudding');
     }
 
     public function index(Request $request)
     {
-        $cond_title = $request->cond_title;
-        if ($cond_title != null) {
-            // 検索されたら検索結果を取得する
-            $posts = Pudding::where('shop_name', $cond_title)->get(); //titleをshop_nameに変更した
-        } else {
-            // それ以外はすべての店名を取得する
-            $posts = Pudding::all();
+        $keyword = $request->input('keyword');
+        // $query = Post::query();
+
+        if(!empty($keyword)) {
+            $query->where('shop_name', 'LIKE', "%{$keyword}%")
+                ->orWhere('reservations_allowed', 'LIKE', "%{$keyword}%");
         }
-        return view('admin.pudding.index', ['posts' => $posts, 'cond_title' => $cond_title]);
+
+        // $posts = $query->get();
+
+        return view('admin.pudding.index', compact('keyword'));
+        // $cond_title = $request->cond_title;
+        // if ($cond_title != null) {
+        //     // 検索されたら検索結果を取得する
+        //     $posts = Pudding::where('shop_name', $cond_title)->get(); //titleをshop_nameに変更した
+        // } else {
+        //     // それ以外はすべての店名を取得する
+        //     $posts = Pudding::all();
+        // }
+        // return view('admin.pudding.index', ['posts' => $posts, 'cond_title' => $cond_title]);
     }
 
     public function edit(Request $request)
@@ -66,6 +77,7 @@ class PuddingController extends Controller
         if (empty($pudding)) {
             abort(404);
         }
+
         return view('admin.pudding.edit', ['pudding_form' => $pudding]);
     }
 
