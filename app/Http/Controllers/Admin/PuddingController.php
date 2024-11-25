@@ -49,14 +49,14 @@ class PuddingController extends Controller
     public function index(Request $request)
     {
         $keyword = $request->input('keyword');
-        // $query = Post::query();
+        $query = pudding::query();
 
         if(!empty($keyword)) {
             $query->where('shop_name', 'LIKE', "%{$keyword}%")
                 ->orWhere('reservations_allowed', 'LIKE', "%{$keyword}%");
         }
 
-        // $posts = $query->get();
+        $puddings = $query->get();
 
         return view('admin.pudding.index', compact('keyword'));
         // $cond_title = $request->cond_title;
