@@ -58,7 +58,7 @@ class PuddingController extends Controller
 
         $puddings = $query->get();
 
-        return view('admin.pudding.index', compact('keyword'));
+        return view('admin.pudding.index', compact('keyword', 'puddings')); //59の変数と同じにする
         // $cond_title = $request->cond_title;
         // if ($cond_title != null) {
         //     // 検索されたら検索結果を取得する

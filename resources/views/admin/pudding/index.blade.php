@@ -50,27 +50,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <th>1</th>
-                                <td>適当な文字</td>
-                                <td>適当な文字</td>
-                                <td>文字</td>
-                                <td>文字</td>
-                                <td>文字</td>
-                                <td>文字</td>
-                                <td>文字</td>
-                            </tr>
-                            <tr>
-                                <th>1</th>
-                                <td>適当な文字</td>
-                                <td>適当な文字</td>
-                                <td>文字</td>
-                                <td>文字</td>
-                                <td>文字</td>
-                                <td>文字</td>
-                                <td>文字</td>
-                            </tr>
-                            {{-- @foreach($posts as $pudding)
+                            @foreach($puddings as $pudding)
                                 <tr>
                                     <th>{{ $pudding->id }}</th>
                                     <td>{{ Str::limit($pudding->shop_name, 100) }}</td>
@@ -89,7 +69,7 @@
                                         </div>
                                     </td>
                                 </tr>
-                            @endforeach --}}
+                            @endforeach
                         </tbody>
                     </table>
                 </div>
