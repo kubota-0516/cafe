@@ -53,7 +53,7 @@ class PuddingController extends Controller
 
         if(!empty($keyword)) {
             $query->where('shop_name', 'LIKE', "%{$keyword}%")
-                ->orWhere('reservations_allowed', 'LIKE', "%{$keyword}%");
+                ->orWhere('shop_introduction', 'LIKE', "%{$keyword}%");
         }
 
         $puddings = $query->get();
@@ -106,7 +106,7 @@ class PuddingController extends Controller
         // 該当するデータを上書きして保存する
         $pudding->fill($pudding_form)->save();
 
-        $history = new History();
+        $history = new History();              //toastにはなくてもいい？消してもいい
         $history->pudding_id = $pudding->id;
         $history->edited_at = Carbon::now();
         $history->save();

@@ -9,7 +9,6 @@ class TopController extends Controller
 {
     public function index(Request $request)
     {
-        return view('admin.pudding.index');
-        return view('admin.toast.index');  
+        return view('user.top.choises'); //??
     }
 }

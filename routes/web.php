@@ -12,10 +12,8 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/', [App\Http\Controllers\User\TopController::class, 'index'])->name('top'); //namespaceに書いてある
 
-Route::get('/', function () {
-    return view('home');
-});
 
 use App\Http\Controllers\Admin\PuddingController;
 Route::controller(PuddingController::class)->prefix('admin')->name('admin.')->middleware('auth')->group(function() {
@@ -27,5 +25,11 @@ Route::controller(PuddingController::class)->prefix('admin')->name('admin.')->mi
     Route::get('pudding/delete', 'delete')->name('pudding.delete');
 });
 Auth::routes();
+
+// use App\Http\Controllers\User\TopController;
+// Route::controller(TopController::class)->prefix('user')->name('user.')->middleware('auth')->group(function() {
+//     Route::get('pudding', 'index')->name('pudding.index');
+// });
+    
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

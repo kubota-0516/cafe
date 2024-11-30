@@ -13,13 +13,14 @@
             <div class="col-md-8">
                 <form action="{{ route('admin.pudding.index') }}" method="get">
                     <div class="form-group row">
-                        <label class="col-md-2">店名</label>
+                        <label class="col-md-2">店名  紹介文で検索 </label>
                         <!-- <div class="col-md-8">
                             <input type="text" class="form-control" name="keyword" value="{{ $keyword }}">
                         </div> -->
                         
                         <div class="col-md-4">
-                            @csrf
+                            <!-- @csrf -->
+                            
                             <form action="{{ route('admin.pudding.index') }}" method="get">
                                 <input type="text" name="keyword" value="{{ $keyword }}">
                                 <input type="submit" value="検索">

@@ -1,5 +1,5 @@
-@extends('layouts.users')
-@section('shop_name', '選択画面')
+@extends('layouts.user')
+@section('title', '選択画面') {{-- titleタグのyieldに置き換わるのでタブに表示される文字列になる --}} 
 
 @section('content')
     <div class="container">
@@ -8,10 +8,10 @@
         </div>
         <div class="row">
             <div class="col-md-4">
-                <a href="{{ route('admin.pudding.add') }}" role="button" class="btn btn-primary">固めプリン</a>
+                <a href="#" role="button" class="btn btn-primary">固めプリン</a>
             </div>
             <div class="col-md-4">
-                <a href="{{ route('admin.toast.add') }}" role="button" class="btn btn-primary">シナモントースト</a>
+                <a href="#" role="button" class="btn btn-primary">シナモントースト</a>
             </div>
         </div>
     </div>
