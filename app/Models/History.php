@@ -12,6 +12,7 @@ class History extends Model
 
     public static $rules = array(
         'pudding_id' => 'required',
+        'toast_id' => 'required',
         'edited_at' => 'required',
     );
 }

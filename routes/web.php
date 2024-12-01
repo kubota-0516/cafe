@@ -26,6 +26,17 @@ Route::controller(PuddingController::class)->prefix('admin')->name('admin.')->mi
 });
 Auth::routes();
 
+use App\Http\Controllers\Admin\ToastController;
+Route::controller(ToastController::class)->prefix('admin')->name('admin.')->middleware('auth')->group(function() {
+    Route::get('toast/create', 'add')->name('toast.add');
+    Route::post('toast/create', 'create')->name('toast.create');
+    Route::get('toast', 'index')->name('toast.index'); //getの後indexとは書かないのが普通
+    Route::post('toast/edit', 'update')->name('toast.update');
+    Route::get('toast/edit', 'edit')->name('toast.edit');
+    Route::get('toast/delete', 'delete')->name('toast.delete');
+});
+Auth::routes();
+
 // use App\Http\Controllers\User\TopController;
 // Route::controller(TopController::class)->prefix('user')->name('user.')->middleware('auth')->group(function() {
 //     Route::get('pudding', 'index')->name('pudding.index');
