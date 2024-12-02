@@ -19,9 +19,9 @@ class ToastController extends Controller
     public function create(Request $request)
     {
          // Validationを行う
-         $this->validate($request, Tasto::$rules);
+         $this->validate($request, Toast::$rules);
 
-         $toast = new toast;
+         $toast = new Toast;
          $form = $request->all();
  
          // フォームから画像が送信されてきたら、保存して、$toast->image_path に画像のパスを保存する
@@ -48,7 +48,7 @@ class ToastController extends Controller
     public function index(Request $request)
     {
         $keyword = $request->input('keyword');
-        $query = toast::query();
+        $query = Toast::query();
 
         if(!empty($keyword)) {
             $query->where('shop_name', 'LIKE', "%{$keyword}%")
@@ -64,7 +64,7 @@ class ToastController extends Controller
     public function edit(Request $request)
     {
         // toast Modelからデータを取得する
-        $toast = toast::find($request->id);
+        $toast = Toast::find($request->id);
         if (empty($toast)) {
             abort(404);
         }
