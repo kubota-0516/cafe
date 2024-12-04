@@ -96,10 +96,10 @@ class ToastController extends Controller
         // 該当するデータを上書きして保存する
         $toast->fill($toast_form)->save();
 
-        $history = new History();              //toastにはなくてもいい？消してもいい
-        $history->toast_id = $toast->id;
-        $history->edited_at = Carbon::now();
-        $history->save();
+        // $history = new ToastHistory();              //toastにはなくてもいい？消してもいい
+        // $history->toast_id = $toast->id;
+        // $history->edited_at = Carbon::now();
+        // $history->save();
 
         return redirect('admin/toast');
     }

@@ -106,11 +106,6 @@ class PuddingController extends Controller
         // 該当するデータを上書きして保存する
         $pudding->fill($pudding_form)->save();
 
-        $history = new History();              //toastにはなくてもいい？消してもいい
-        $history->pudding_id = $pudding->id;
-        $history->edited_at = Carbon::now();
-        $history->save();
-
         return redirect('admin/pudding');
     }
 

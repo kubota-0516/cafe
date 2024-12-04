@@ -8,9 +8,9 @@
       <div class="row">
         <div class="col">
           <a href="#" role="button" class="btn btn-primary">店名</a>
+        </div>
       </div>
-        
       <input type="submit" class="btn btn-primary" value="トップページに戻る">
-
-
+    </div>
+</div>
 @endsection
