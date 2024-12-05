@@ -20,9 +20,4 @@ class Toast extends Model
         'shop_address'=> 'required',
     );
 
-     // Pudding Modelに関連付けを行う
-     public function histories()
-     {
-         return $this->hasMany('App\Models\ToastHistory');
-     }
 }

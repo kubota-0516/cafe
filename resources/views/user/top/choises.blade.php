@@ -8,10 +8,10 @@
         </div>
         <div class="row">
             <div class="col-md-4">
-                <a href="#" role="button" class="btn btn-primary">固めプリン</a>
+                <a href="{{ route('user.pudding.index') }}" role="button" class="btn btn-primary">固めプリン</a>
             </div>
             <div class="col-md-4">
-                <a href="#" role="button" class="btn btn-primary">シナモントースト</a>
+                <a href="{{ route('user.toast.index') }}" role="button" class="btn btn-primary">シナモントースト</a>
             </div>
         </div>
     </div>
