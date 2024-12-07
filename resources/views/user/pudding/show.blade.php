@@ -61,6 +61,8 @@
                     <hr color="#c0c0c0">
             </div>
           </div>
-      <input type="submit" class="btn btn-primary" value="トップページに戻る">
+    {{-- 1. 親フォームタグを作成して、遷移先を指定する --}}
+    <input type="submit" class="btn btn-primary" value="トップページに戻る">
+    {{-- 2. ボタンタグを使用して、遷移先を指定する --}}
 </div>
 @endsection

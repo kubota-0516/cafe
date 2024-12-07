@@ -61,6 +61,7 @@ Route::controller(UserToastController::class)->prefix('user')->name('user.')->mi
     Route::post('toast/edit', 'update')->name('toast.update');
     Route::get('toast/edit', 'edit')->name('toast.edit');
     Route::get('toast/delete', 'delete')->name('toast.delete');
+    Route::get('toast/{id}', 'show')->name('toast.show');
 });
     
 
