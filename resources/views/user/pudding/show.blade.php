@@ -61,8 +61,10 @@
                     <hr color="#c0c0c0">
             </div>
           </div>
-    {{-- 1. 親フォームタグを作成して、遷移先を指定する --}}
-    <input type="submit" class="btn btn-primary" value="トップページに戻る">
+    {{-- 1. 親フォームタグを作成して、遷移先を指定するか、aタグで囲んだものがリンクになるのでそれで指定するか --}}
     {{-- 2. ボタンタグを使用して、遷移先を指定する --}}
+    <a href="{{ route('user.pudding.index') }}">
+        <button>カフェの一覧に戻る</button>
+    </a>
 </div>
 @endsection

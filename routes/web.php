@@ -40,6 +40,7 @@ use App\Http\Controllers\User\TopController;
 Route::controller(TopController::class)->prefix('user')->name('user.')->middleware('auth')->group(function() {
     Route::get('pudding', 'index')->name('pudding.index');
     Route::get('toast', 'index')->name('toast.index');
+    Route::get('top/choises', 'index')->name('choises.index');
 });
 
 use App\Http\Controllers\User\PuddingController as UserPuddingController;
@@ -64,6 +65,10 @@ Route::controller(UserToastController::class)->prefix('user')->name('user.')->mi
     Route::get('toast/{id}', 'show')->name('toast.show');
 });
     
+// use App\Http\Controllers\User\TopController;
+// Route::controller(TopController::class)->prefix('user')->name('user.')->middleware('auth')->group(function() {
+//     Route::get('top/choises', 'index')->name('choises.index');
+// });
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/', [App\Http\Controllers\User\TopController::class, 'index'])->name('top'); //namespaceに書いてある

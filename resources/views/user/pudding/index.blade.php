@@ -27,8 +27,11 @@
         </div>
         <hr color="#c0c0c0">
       @endforeach 
+      </div>
     </div>
   </div>
-  <input type="submit" class="btn btn-primary" value="トップページに戻る">
+  <form action="top/choises">
+    <button type="submit">トップページに戻る</button>
+  </form>
 </div>
 @endsection
