@@ -4,13 +4,13 @@
 @section('content')
 <div class="container">
     <div class="row">
-        <h2>どちらを検索しますか？</h2>
+        <h2 style="text-align:center">どちらを検索しますか？</h2>
     </div>
-    <div class="row">
-        <div class="col-md-4">
+    <div style="text-align:center" class="row">
+        <div class="col-md-6">
             <a href="{{ route('user.pudding.index') }}" role="button" class="btn btn-primary">固めプリン</a>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-6">
             <a href="{{ route('user.toast.index') }}" role="button" class="btn btn-primary">シナモントースト</a>
         </div>
     </div>

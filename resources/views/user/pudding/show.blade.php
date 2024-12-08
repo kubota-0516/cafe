@@ -16,43 +16,43 @@
                             <div class="text col-md-6">
                                 
                                 <div class="shop_introduction mt-3">
-                                    {{ Str::limit($post->shop_introduction, 1500) }}
+                                    {{ Str::limit($post->shop_introduction, 150) }}
                                 </div>
                             </div>
                             <div class="text col-md-6">
                                 
                                 <div class="shop_introduction mt-3">
-                                    {{ Str::limit($post->officialsite, 1500) }}
+                                    <a href="{{ Str::limit($post->officialsite, 100) }}">{{ Str::limit($post->officialsite, 100) }}</a>
                                 </div>
                             </div>
                             <div class="text col-md-6">
                                 
                                 <div class="shop_introduction mt-3">
-                                    {{ Str::limit($post->googlemaplink, 1500) }}
+                                    <a href="{{ Str::limit($post->googlemaplink, 100) }}">Googlemapで見る</a>
                                 </div>
                             </div>
                             <div class="text col-md-6">
                                 
                                 <div class="shop_introduction mt-3">
-                                    {{ Str::limit($post->pets_allowed, 1500) }}
+                                    {{ Str::limit($post->pets_allowed, 20) }}
                                 </div>
                             </div>
                             <div class="text col-md-6">
                                 
                                 <div class="shop_introduction mt-3">
-                                    {{ Str::limit($post->reservations_allowed, 1500) }}
+                                    {{ Str::limit($post->reservations_allowed, 20) }}
                                 </div>
                             </div>
                             <div class="text col-md-6">
                                 
                                 <div class="shop_introduction mt-3">
-                                    {{ Str::limit($post->shop_address, 1500) }}
+                                    {{ Str::limit($post->shop_address, 100) }}
                                 </div>
                             </div>
                             <div class="text col-md-6">
                                 
                                 <div class="shop_introduction mt-3">
-                                    {{ Str::limit($post->image_path, 1500) }}
+                                    {{ Str::limit($post->image_path, 150) }}
                                 </div>
                             </div>
 
