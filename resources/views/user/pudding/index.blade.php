@@ -33,5 +33,7 @@
   <form action="top/choises">
     <button type="submit">トップページに戻る</button>
   </form>
+  <body background="https://cdn.pixabay.com/photo/2020/04/13/10/48/coffee-5037804_640.jpg">
+  </body>
 </div>
 @endsection
