@@ -5,10 +5,10 @@
 <div class="container text-center">
   <hr color="#c0c0c0">
   <div class="center-block">
-    <div class="posts mx-auto mt-3">
+    <div class="posts mx-auto">
       @foreach($posts as $post) {{-- $postsはcontrollerから送られたトーストの情報一覧 --}}
         <div class="post">
-          <div class="image text-right mt-4">
+          <div class="image text-right mt-3">
             @if ($post->image_path) {{-- あれば表示する --}}
             <img src="{{ asset('storage/image/' . $post->image_path) }}">
             @endif
@@ -25,6 +25,7 @@
     </div>
   </div>
   <form action="top/choises">
-    <button class="btn btn-dark" type="submit"><i class="fas fa-redo"></i>トップページに戻る</button>
+    <button class="btn btn-outline-warning" type="submit"><i class="fas fa-redo"></i>トップページに戻る</button>
+  </form>
 </div>
 @endsection

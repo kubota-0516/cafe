@@ -19,15 +19,13 @@
               <div class="shop_introduction mt-3">
                 {{ Str::limit($post->shop_introduction, 1500) }}
               </div>
-            </div>
           </div>
           <hr color="#c0c0c0">
-        @endforeach 
-        </div>
+        @endforeach
       </div>
     </div>
-    <form action="top.choises">
-      <button class="btn btn-dark" type="submit"><i class="fas fa-redo"></i>トップページに戻る</button>
+    <form action="top/choises">
+      <button class="btn btn-outline-warning" type="submit"><i class="fas fa-redo"></i>トップページに戻る</button>
     </form>
   </div>
 @endsection

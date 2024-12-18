@@ -33,12 +33,6 @@
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label class="col-md-2" for="googlemaplink">Googlemapのリンク</label>
-                        <div class="col-md-10">
-                            <textarea class="form-control" name="googlemaplink" rows="1">{{ $toast_form->googlemaplink }}</textarea>
-                        </div>
-                    </div>
-                    <div class="form-group row">
                         <label class="col-md-2" for="pets_allowed">ペット同伴の可否</label>
                         <div class="col-md-10">
                             <textarea class="form-control" name="pets_allowed" rows="1">{{ $toast_form->pets_allowed }}</textarea>

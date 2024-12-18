@@ -38,12 +38,6 @@
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label class="col-md-2">Googlemapのリンク</label>
-                        <div class="col-md-10">
-                            <textarea class="form-control" name="googlemaplink" rows="1">{{ old('googlemaplink') }}</textarea>
-                        </div>
-                    </div>
-                    <div class="form-group row">
                         <label class="col-md-2">ペット同伴の可否</label>
                         <div class="col-md-10">
                             <textarea class="form-control" name="pets_allowed" rows="1">{{ old('pets_allowed') }}</textarea>

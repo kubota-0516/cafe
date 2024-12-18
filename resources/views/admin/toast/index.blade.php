@@ -57,7 +57,6 @@
                                     <td>{{ Str::limit($toast->shop_name, 100) }}</td>
                                     <td>{{ Str::limit($toast->shop_introduction, 200) }}</td>
                                     <td>{{ Str::limit($toast->officialsite, 100) }}</td>
-                                    <td>{{ Str::limit($toast->googlemaplink, 100) }}</td>
                                     <td>{{ Str::limit($toast->pets_allowed, 100) }}</td>
                                     <td>{{ Str::limit($toast->reservations_allowed, 100) }}</td>
                                     <td>{{ Str::limit($toast->shop_address, 100) }}</td>

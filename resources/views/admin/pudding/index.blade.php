@@ -57,7 +57,6 @@
                                     <td>{{ Str::limit($pudding->shop_name, 100) }}</td>
                                     <td>{{ Str::limit($pudding->shop_introduction, 200) }}</td>
                                     <td>{{ Str::limit($pudding->officialsite, 100) }}</td>
-                                    <td>{{ Str::limit($pudding->googlemaplink, 100) }}</td>
                                     <td>{{ Str::limit($pudding->pets_allowed, 100) }}</td>
                                     <td>{{ Str::limit($pudding->reservations_allowed, 100) }}</td>
                                     <td>{{ Str::limit($pudding->shop_address, 100) }}</td>

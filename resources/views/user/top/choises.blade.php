@@ -1,4 +1,4 @@
-@extends('layouts.user')
+@extends('layouts.top')
 @section('title', '選択画面') {{-- titleタグのyieldに置き換わるのでタブに表示される文字列になる --}} 
 
 @section('content')
@@ -8,10 +8,10 @@
     </div>
     <div style="text-align:center" class="row">
         <div class="col-md-6">
-            <a href="{{ route('user.pudding.index') }}" role="button" class="btn btn-primary">固めプリン</a>
+            <a href="{{ route('user.pudding.index') }}" role="button" class="btn btn-warning">固めプリン</a>
         </div>
         <div class="col-md-6">
-            <a href="{{ route('user.toast.index') }}" role="button" class="btn btn-primary">シナモントースト</a>
+            <a href="{{ route('user.toast.index') }}" role="button" class="btn btn-warning">シナモントースト</a>
         </div>
     </div>
 </div>
