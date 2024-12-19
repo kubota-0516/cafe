@@ -56,12 +56,8 @@
                     </div>
                 </div>
                 <hr color="#c0c0c0">
-            </div>
-    <form action="toast">
-        <button class="btn btn-outline-warning" type="submit"><i class="fas fa-redo"></i>トップページに戻る</button>
-    </form>
-    <a href="{{ route('user.toast.index') }}">
-        <button>カフェの一覧に戻る</button>
+    <a href="{{ route('user.toast.index') }}" class="btn btn-outline-warning">
+        <i class="fas fa-redo"></i>カフェ一覧へ戻る
     </a>
 </div>
 @endsection

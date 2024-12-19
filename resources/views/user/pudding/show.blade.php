@@ -58,11 +58,8 @@
             </div>
     {{-- 1. 親フォームタグを作成して、遷移先を指定するか、aタグで囲んだものがリンクになるのでそれで指定するか --}}
     {{-- 2. ボタンタグを使用して、遷移先を指定する --}}
-    <form action="pudding">
-        <button class="btn btn-outline-warning" type="submit"><i class="fas fa-redo"></i>カフェ一覧へ戻る</button>
-    </form>
-    <a href="{{ route('user.toast.index') }}">
-        <button>カフェの一覧に戻る</button>
+    <a href="{{ route('user.pudding.index') }}" class="btn btn-outline-warning">
+        <i class="fas fa-redo"></i>カフェ一覧へ戻る
     </a>
 </div>
 @endsection
