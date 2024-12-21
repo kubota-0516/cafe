@@ -15,15 +15,14 @@ return new class extends Migration
     {
         Schema::create('puddings', function (Blueprint $table) {
             $table->id();
-            $table->string('shop_name'); 
+            $table->string('shop_name'); //stringは入力可能数が255文字になる
             $table->string('shop_introduction');  
             $table->string('officialsite');
-            $table->string('googlemaplink');
             $table->string('pets_allowed');
             $table->string('reservations_allowed');
             $table->string('shop_address');
             $table->string('image_path');  // 画像のパスを保存するカラム
-            $table->timestamps();
+            $table->timestamps(); //これを書くことでcreated_at、updated_atのカラムが出来る
         });
     }
 

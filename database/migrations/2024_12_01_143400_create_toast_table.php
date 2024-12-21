@@ -18,7 +18,6 @@ return new class extends Migration
             $table->string('shop_name'); 
             $table->string('shop_introduction');  
             $table->string('officialsite');
-            $table->string('googlemaplink');
             $table->string('pets_allowed');
             $table->string('reservations_allowed');
             $table->string('shop_address');

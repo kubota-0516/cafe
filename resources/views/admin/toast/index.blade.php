@@ -42,7 +42,6 @@
                                 <th width="15%">店名</th>
                                 <th width="30%">お店の紹介文</th>
                                 <th width="20%">お店のURL</th>
-                                <th width="20%">Googlemapのリンク</th>
                                 <th width="8%">ペット同伴の可否</th>
                                 <th width="8%">予約の可否</th>
                                 <th width="20%">お店の住所</th>

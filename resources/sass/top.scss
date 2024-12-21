@@ -1,7 +1,7 @@
 body{
     background-color: #e19b32; 
     background-image: url("/images/cafe.jpg");
-    width: 100vw; //ビューポートウイックス（表示されているブラウザーの横幅にピッタリ合わせる）
+    width: 100vw; //ビューポートウイックス（表示されているブラウザーの横幅にピッタリ合わせる）（100はブラウザーの％）
     height: 100vh; //ビューポートハイト（表示されているブラウザーの縦幅にピッタリ合わせる）
     background-size: cover;
     background-repeat: no-repeat;

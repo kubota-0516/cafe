@@ -24,6 +24,7 @@ class PuddingController extends Controller
 
          $pudding = new Pudding;
          $form = $request->all();
+        //  dd($form);
  
          // フォームから画像が送信されてきたら、保存して、$pudding->image_path に画像のパスを保存する
          if (isset($form['image'])) {

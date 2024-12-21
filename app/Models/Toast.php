@@ -14,7 +14,6 @@ class Toast extends Model
         'shop_name' => 'required',
         'shop_introduction' => 'required',
         'officialsite'=> 'required',
-        'googlemaplink'=> 'required',
         'pets_allowed'=> 'required',
         'reservations_allowed'=> 'required',
         'shop_address'=> 'required',
