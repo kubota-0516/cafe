@@ -1,4 +1,4 @@
-@extends('layouts.user')
+@extends('layouts.usershow')
 @section('title', '店舗情報') {{-- 一行で終わるもの --}}
 
 @section('content') {{-- 穴埋めする内容が複数ある場合があるので@endで終わる --}}
@@ -56,10 +56,5 @@
                     </div>
                     <hr color="#c0c0c0">
             </div>
-    {{-- 1. 親フォームタグを作成して、遷移先を指定するか、aタグで囲んだものがリンクになるのでそれで指定するか --}}
-    {{-- 2. ボタンタグを使用して、遷移先を指定する --}}
-    <a href="{{ route('user.pudding.index') }}" class="btn btn-outline-warning">
-        <i class="fas fa-redo"></i>カフェ一覧へ戻る
-    </a>
 </div>
 @endsection

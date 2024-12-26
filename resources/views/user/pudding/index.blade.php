@@ -1,4 +1,4 @@
-@extends('layouts.user')
+@extends('layouts.userindex')
 @section('title', '固めプリンのお店一覧') {{-- 一行で終わるもの --}}
 
 @section('content') {{-- 穴埋めする内容が複数ある場合があるので@endで終わる --}}
@@ -24,8 +24,5 @@
         @endforeach
       </div>
     </div>
-    <form action="top/choises">
-      <button class="btn btn-outline-warning" type="submit"><i class="fas fa-redo"></i>トップページに戻る</button>
-    </form>
   </div>
 @endsection

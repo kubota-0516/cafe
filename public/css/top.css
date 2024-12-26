@@ -52,3 +52,7 @@ body {
   border-color: #826dec;
   background-color: #000;
 }
+
+nav {
+  position: fixed !important;
+}
