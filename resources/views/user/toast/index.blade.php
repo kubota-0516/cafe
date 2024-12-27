@@ -5,6 +5,7 @@
 <div class="container text-center">
   <hr color="#c0c0c0">
   <div class="center-block">
+    <h2>シナモントーストのお店一覧</h2>
     <div class="posts mx-auto">
       @foreach($posts as $post) {{-- $postsはcontrollerから送られたトーストの情報一覧 --}}
         <div class="post">

@@ -32,7 +32,7 @@
             {{-- 画面上部に表示するナビゲーションバーです。 --}}
             <nav class="navbar navbar-expand-md navbar-dark navbar-laravel fixed-top">
                 <div class="justify-content-end">
-                    <a href="javascript:history.back()" class="btn btn-outline-warning"><i class="fas fa-redo"></i>トップページに戻る</a>
+                    <a href="javascript:history.back()" class="btn btn-outline-warning"><i class="fas fa-redo"></i>お店の一覧に戻る</a>
                 </div>
             </nav>
             {{-- ここまでナビゲーションバー --}}

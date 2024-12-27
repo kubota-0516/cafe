@@ -4,6 +4,7 @@
 @section('content') {{-- 穴埋めする内容が複数ある場合があるので@endで終わる --}}
 <div class="container text-center">
     <hr color="#c0c0c0">
+    <h3>お店の詳細</h3>
             <div class="posts col-md-8 mx-auto mt-3">
                 <div class="post">
                     <div class="image .container-md text-right mt-4">
