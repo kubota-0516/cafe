@@ -16,22 +16,22 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\Admin\PuddingController;
 Route::controller(PuddingController::class)->prefix('admin')->name('admin.')->middleware('auth')->group(function() {
-    Route::get('pudding/create', 'add')->name('pudding.add');                //middleware('auth')はログインしていないとアクセス出来ないrouting
-    Route::post('pudding/create', 'create')->name('pudding.create');
-    Route::get('pudding', 'index')->name('pudding.index'); //getの後indexとは書かないのが普通
+    Route::get('pudding/create', 'add')->name('pudding.add')->middleware('auth');                //middleware('auth')はログインしていないとアクセス出来ないrouting
+    Route::post('pudding/create', 'create')->name('pudding.create')->middleware('auth');
+    Route::get('pudding', 'index')->name('pudding.index')->middleware('auth'); //getの後indexとは書かないのが普通
     Route::post('pudding/edit', 'update')->name('pudding.update');
-    Route::get('pudding/edit', 'edit')->name('pudding.edit');
+    Route::get('pudding/edit', 'edit')->name('pudding.edit')->middleware('auth');
     Route::get('pudding/delete', 'delete')->name('pudding.delete');
 });
 Auth::routes();
 
 use App\Http\Controllers\Admin\ToastController;
 Route::controller(ToastController::class)->prefix('admin')->name('admin.')->middleware('auth')->group(function() {
-    Route::get('toast/create', 'add')->name('toast.add');
-    Route::post('toast/create', 'create')->name('toast.create');
-    Route::get('toast', 'index')->name('toast.index'); //getの後indexとは書かないのが普通
+    Route::get('toast/create', 'add')->name('toast.add')->middleware('auth');
+    Route::post('toast/create', 'create')->name('toast.create')->middleware('auth');
+    Route::get('toast', 'index')->name('toast.index')->middleware('auth'); //getの後indexとは書かないのが普通
     Route::post('toast/edit', 'update')->name('toast.update');
-    Route::get('toast/edit', 'edit')->name('toast.edit');
+    Route::get('toast/edit', 'edit')->name('toast.edit')->middleware('auth');
     Route::get('toast/delete', 'delete')->name('toast.delete');
 });
 Auth::routes();

@@ -2,10 +2,8 @@ body {
   background-color: #775522;
   background-image: url("/images/mokume.jpg");
   background-repeat: repeat;
-  background-repeat: no-repeat;
   background-position: center;
-  background-color: #fff9f9;
-  color: #671a1a;
+  color: #fff;
 }
 
 .navbar-laravel {
@@ -54,4 +52,8 @@ body {
 
 .justify-content-end {
   margin: 0 0 0 auto;
+}
+
+a {
+  color: #fff;
 }
