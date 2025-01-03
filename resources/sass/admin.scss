@@ -1,53 +1,53 @@
 body{
-    background-color: #775522; 
-    background-image: url("/images/mokume.jpg");
-    background-repeat: repeat;
-    background-position: center;
-    color: #fff; //文字
+background-color: #775522; 
+background-image: url("/images/mokume.jpg");
+background-repeat: repeat;
+background-position: center;
+color: #fff; //文字
 }
-  
+
 .navbar-laravel {
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(189, 8, 186, 0.04);
+background-color: #fff; //上にあるヘッダー
+box-shadow: 0 2px 4px rgba(189, 8, 186, 0.04);
 }
 
 .navbar-brand {
-  color: #f50808 !important;
+color: #f50808 !important;
 }
 
 .nav-link {
-  color: #5521f0 !important;
+color: #5521f0 !important;
 }
 
 .table-dark {
-  color: #dc16ff;
+color: #dc16ff;
 }
 
 .list-group-item {
-  border-color: #22f50b;
-  background-color: #08f5f5;
+border-color: #22f50b;
+background-color: #08f5f5;
 }
 
 .login-box {
-  background-color: rgba(32, 4, 4, 0.895);
+background-color: rgba(32, 4, 4, 0.895);
 }
 
 .login-header {
-  background-color: rgba(245, 121, 5, 0.959)
+background-color: rgba(245, 121, 5, 0.959)
 }
 
 .login-body {
-  background-color: rgba(0, 0, 0, 0.25);
+background-color: rgba(0, 0, 0, 0.25);
 }
 
 .form-group {
-  margin-bottom: 1rem;
+margin-bottom: 1rem;
 }
 
 .list-group-item {
-  color: #f8f406;
-  border-color: #826dec;
-  background-color: #000;
+color: #f8f406;
+border-color: #826dec;
+background-color: #000;
 }
 
 .justify-content-end{ //右寄せ
@@ -56,4 +56,28 @@ margin: 0 0 0 auto;
 
 a {
 color: #fff;
+}
+
+.box26 {
+position: relative;
+margin: 2em 0;
+padding: 0.5em 1em;
+border: solid 3px #fff;
+border-radius: 8px;
+}
+.box26 .box-title {
+position: absolute;
+display: inline-block;
+top: -13px;
+left: 10px;
+padding: 0 9px;
+line-height: 1;
+font-size: 19px;
+background: #FFF;
+color: #000;
+font-weight: bold;
+}
+.box26 p {
+margin: 0; 
+padding: 0;
 }

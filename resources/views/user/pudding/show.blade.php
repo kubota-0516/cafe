@@ -18,7 +18,7 @@
                             </div>
                             <div class="text">
                                 <div class="shop_introduction">
-                                    {{ Str::limit($post->shop_introduction, 150) }}
+                                    {{ Str::limit($post->shop_introduction, 1000) }}
                                 </div>
                             </div><br>
                             <div class="alert alert-light" role="alert">
@@ -26,7 +26,7 @@
                             </div>
                             <div class="text">                                   
                                 <div class="shop_introduction">
-                                    <a href="{{ Str::limit($post->officialsite, 100) }}">{{ Str::limit($post->officialsite, 100) }}</a>
+                                    <a href="{{ Str::limit($post->officialsite, 1000) }}">{{ Str::limit($post->officialsite, 1000) }}</a>
                                 </div>
                             </div><br>
                             <div class="alert alert-light" role="alert">
@@ -34,7 +34,7 @@
                             </div>
                             <div class="text">                                    
                                 <div class="shop_introduction">
-                                    {{ Str::limit($post->pets_allowed, 20) }}
+                                    {{ Str::limit($post->pets_allowed, 100) }}
                                 </div>
                             </div><br>
                             <div class="alert alert-light" role="alert">
@@ -42,7 +42,7 @@
                             </div>
                             <div class="text">                                  
                                 <div class="shop_introduction">
-                                    {{ Str::limit($post->reservations_allowed, 20) }}
+                                    {{ Str::limit($post->reservations_allowed, 100) }}
                                 </div>
                             </div><br>
                             <div class="alert alert-light" role="alert">
@@ -50,7 +50,7 @@
                             </div>
                             <div class="text">    
                                 <div class="shop_introduction">
-                                    {{ Str::limit($post->shop_address, 100) }}
+                                    {{ Str::limit($post->shop_address, 1000) }}
                                 </div>
                             </div>
                         </ul>

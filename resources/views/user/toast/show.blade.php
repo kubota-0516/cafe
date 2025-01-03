@@ -13,44 +13,45 @@
                         @endif
                     </div><br>
                     <ul>
-                        <div class="alert alert-light" role="alert">
-                            <p>おすすめポイント</p>
+                        <div class="box26">
+                            <span class="box-title">おすすめポイント</span>
+                            <p>{{ old('shop_introduction') }}</p>
                         </div>
                         <div class="text">
-                            <div class="shop_introduction mt-3">
-                                {{ Str::limit($post->shop_introduction, 1500) }}
+                            <div class="shop_introduction">
+                                {{ Str::limit($post->shop_introduction, 1000) }}
                             </div>
                         </div><br>
                         <div class="alert alert-light" role="alert">
                             <p>公式ホームページ</p>
                         </div>
                         <div class="text">
-                            <div class="shop_introduction mt-3">
-                                {{ Str::limit($post->officialsite, 1500) }}
+                            <div class="shop_introduction">
+                                <a href="{{ Str::limit($post->officialsite, 1000) }}">{{ Str::limit($post->officialsite, 1000) }}</a>
                             </div>
                         </div><br>
                         <div class="alert alert-light" role="alert">
                             <p>ペット同伴の可否</p>
                         </div>
                         <div class="text">
-                            <div class="shop_introduction mt-3">
-                                {{ Str::limit($post->pets_allowed, 1500) }}
+                            <div class="shop_introduction">
+                                {{ Str::limit($post->pets_allowed, 100) }}
                             </div>
                         </div><br>
                         <div class="alert alert-light" role="alert">
                             <p>予約の可否</p>
                         </div>
                         <div class="text">
-                            <div class="shop_introduction mt-3">
-                                {{ Str::limit($post->reservations_allowed, 1500) }}
+                            <div class="shop_introduction">
+                                {{ Str::limit($post->reservations_allowed, 100) }}
                             </div>
                         </div><br>
                         <div class="alert alert-light" role="alert">
                             <p>住所</p>
                         </div>
                         <div class="text">
-                            <div class="shop_introduction mt-3">
-                                {{ Str::limit($post->shop_address, 1500) }}
+                            <div class="shop_introduction">
+                                {{ Str::limit($post->shop_address, 1000) }}
                             </div>
                         </div>
 
