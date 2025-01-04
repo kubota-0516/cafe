@@ -75,4 +75,19 @@
             </div>
         </div>
     </div>
+
+<script>
+function confirmDelete(id)
+{
+    if (confirm(`id=${id} を削除します。よろしいですか？`)) {
+        // OKが押されたので、削除を実行する
+        const url = "{{ route('admin.toast.delete', ['id' => '']) }}" + id;
+        // 作り出した url に移動できれば、削除できるはず
+        location.href = url;
+    } else {
+        // キャンセル
+        // 何もしない
+    }
+}
+</script>
 @endsection

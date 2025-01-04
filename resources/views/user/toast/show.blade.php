@@ -12,10 +12,8 @@
                             <img src="{{ asset('storage/image/' . $post->image_path) }}">
                         @endif
                     </div><br>
-                    <ul>
-                        <div class="box26">
-                            <span class="box-title">おすすめポイント</span>
-                            <p>{{ old('shop_introduction') }}</p>
+                    <ul><div class="alert alert-light" role="alert">
+                            <p>おすすめポイント</p>
                         </div>
                         <div class="text">
                             <div class="shop_introduction">

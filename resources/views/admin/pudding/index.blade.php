@@ -62,7 +62,8 @@
                                             <a href="{{ route('admin.pudding.edit', ['id' => $pudding->id]) }}">編集</a>
                                         </div>
                                         <div>
-                                            <a href="{{ route('admin.pudding.delete', ['id' => $pudding->id]) }}">削除</a>
+                                            <a href="javascript:confirmDelete({{ $pudding->id }});">削除</a>
+                                            {{-- <a href="{{ route('admin.pudding.delete', ['id' => $pudding->id]) }}">削除</a> --}}
                                         </div>
                                     </td>
                                 </tr>
@@ -73,4 +74,20 @@
             </div>
         </div>
     </div>
+
+<script>
+function confirmDelete(id)
+{
+    if (confirm(`id=${id} を削除します。よろしいですか？`)) {
+        // OKが押されたので、削除を実行する
+        const url = "{{ route('admin.pudding.delete', ['id' => '']) }}" + id;
+        // 作り出した url に移動できれば、削除できるはず
+        location.href = url;
+    } else {
+        // キャンセル
+        // 何もしない
+    }
+}
+</script>
+
 @endsection
