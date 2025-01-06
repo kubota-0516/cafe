@@ -64,7 +64,7 @@
                                             <a href="{{ route('admin.toast.edit', ['id' => $toast->id]) }}">編集</a>
                                         </div>
                                         <div>
-                                            <a href="{{ route('admin.toast.delete', ['id' => $toast->id]) }}">削除</a>
+                                        <a href="javascript:confirmDelete({{ $toast->id }});">削除</a>
                                         </div>
                                     </td>
                                 </tr>

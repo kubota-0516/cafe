@@ -63,7 +63,6 @@
                                         </div>
                                         <div>
                                             <a href="javascript:confirmDelete({{ $pudding->id }});">削除</a>
-                                            {{-- <a href="{{ route('admin.pudding.delete', ['id' => $pudding->id]) }}">削除</a> --}}
                                         </div>
                                     </td>
                                 </tr>
