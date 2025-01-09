@@ -12,7 +12,7 @@
                             <img src="{{ asset('storage/image/' . $post->image_path) }}">
                         @endif
                     </div><br>
-                    <ul><div class="alert alert-light" role="alert">
+                    <ul><div class="alert alert-light" style="height: 53px;">
                             <p>おすすめポイント</p>
                         </div>
                         <div class="text">
@@ -20,7 +20,7 @@
                                 {{ Str::limit($post->shop_introduction, 1000) }}
                             </div>
                         </div><br>
-                        <div class="alert alert-light" role="alert">
+                        <div class="alert alert-light" style="height: 53px;">
                             <p>公式ホームページ</p>
                         </div>
                         <div class="text">
@@ -28,7 +28,7 @@
                                 <a href="{{ Str::limit($post->officialsite, 1000) }}">{{ Str::limit($post->officialsite, 1000) }}</a>
                             </div>
                         </div><br>
-                        <div class="alert alert-light" role="alert">
+                        <div class="alert alert-light" style="height: 53px;">
                             <p>ペット同伴の可否</p>
                         </div>
                         <div class="text">
@@ -36,7 +36,7 @@
                                 {{ Str::limit($post->pets_allowed, 100) }}
                             </div>
                         </div><br>
-                        <div class="alert alert-light" role="alert">
+                        <div class="alert alert-light" style="height: 53px;">
                             <p>予約の可否</p>
                         </div>
                         <div class="text">
@@ -44,7 +44,7 @@
                                 {{ Str::limit($post->reservations_allowed, 100) }}
                             </div>
                         </div><br>
-                        <div class="alert alert-light" role="alert">
+                        <div class="alert alert-light" style="height: 53px;">
                             <p>住所</p>
                         </div>
                         <div class="text">
