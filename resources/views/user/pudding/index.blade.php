@@ -11,7 +11,7 @@
           <div class="post">
             <div class="image text-right mt-3">
               @if ($post->image_path) {{-- あれば表示する --}}
-                <img src="{{ asset('storage/image/' . $post->image_path) }}">
+                <img class="image" src="{{ asset('storage/image/' . $post->image_path) }}">
               @endif
             </div>
                 <div>
