@@ -7,9 +7,9 @@
         <h3>お店の詳細</h3>
             <div class="posts col-md-8 mx-auto mt-3">
                     <div class="post">
-                        <div class="image .container-md text-right mt-4">
+                        <div class=".container-md text-right mt-4">
                                 @if ($post->image_path) {{-- あれば表示する --}}
-                                    <img src="{{ asset('storage/image/' . $post->image_path) }}">
+                                    <img class="image" src="{{ asset('storage/image/' . $post->image_path) }}">
                                 @endif
                         </div><br>
                         <ul>
