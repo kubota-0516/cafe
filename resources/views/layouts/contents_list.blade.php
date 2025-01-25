@@ -38,31 +38,31 @@
             {{-- ここまでナビゲーションバー --}}
             <main class="py-4">
                 {{-- コンテンツをここに入れるため、@yieldで空けておきます。 --}}
-<div class="container text-center">
-<hr color="#c0c0c0">
-<div class="center-block">
-<h2>@yield('title')</h2>
-<div class="posts mx-auto">
-@foreach($posts as $post) {{-- $postsはcontrollerから送られた商品の情報一覧 --}}
-<div class="post">
-<div class="text-right mt-3">
-@if ($post->image_path) {{-- あれば表示する --}}
-<img class="image" src="{{ asset('storage/image/' . $post->image_path) }}">
-@endif
-</div>
-<div>
-<a href="{{ route($route_name, ['id' => $post->id]) }}">{{$post->shop_name}}</a>
-</div>
-<div class="shop_introduction mt-3">
-{{ Str::limit($post->shop_introduction, 1500) }}
-</div>
-</div>
-<hr color="#c0c0c0">
-@endforeach
-</div>
-</div>
-</div>
-</main>
-</div>
-</body>
+                <div class="container text-center">
+                    <hr color="#c0c0c0">
+                    <div class="center-block">
+                        <h2>@yield('title')</h2>
+                            <div class="posts mx-auto">
+                                @foreach($posts as $post) {{-- $postsはcontrollerから送られた商品の情報一覧 --}}
+                                    <div class="post">
+                                        <div class="text-right mt-3">
+                                            @if ($post->image_path) {{-- あれば表示する --}}
+                                                <img class="image" src="{{ asset('storage/image/' . $post->image_path) }}">
+                                            @endif
+                                        </div>
+                                        <div>
+                                            <a href="{{ route($route_name, ['id' => $post->id]) }}">{{$post->shop_name}}</a>
+                                        </div>
+                                        <div class="shop_introduction mt-3">
+                                            {{ Str::limit($post->shop_introduction, 1500) }}
+                                        </div>
+                                    </div>
+                                    <hr color="#c0c0c0">
+                                @endforeach
+                            </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </body>
 </html>
